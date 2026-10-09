@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:name="vector"
+            android:width="64dp"
+            android:height="24dp"
+            android:viewportWidth="64"
+            android:viewportHeight="24">
+            <path
+                android:name="stroke"
+                android:pathData="M 32 2 H 12 A 1 1 0 0 0 12 22 H 52 A 1 1 0 0 0 52 2 Z"
+                android:strokeWidth="1"
+                android:strokeColor="#000000"
+                android:trimPathEnd="0">
+
+            </path>
+            <path
+                android:name="solid"
+                android:fillColor="#989898"
+                android:pathData="M 32 3 H 12 A 1 1 0 0 0 12 21 H 52 A 1 1 0 0 0 52 3 Z"
+                />
+        </vector>
+    </aapt:attr>
+    <target android:name="stroke">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:duration="1000"
+                android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+                android:propertyName="trimPathEnd"
+                android:valueFrom="0"
+                android:valueTo="1"
+                android:valueType="floatType" />
+        </aapt:attr>
+    </target>
+
+    <target android:name="stroke">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:duration="1000"
+                android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+                android:propertyName="trimPathEnd"
+                android:startOffset="2000"
+                android:valueFrom="1"
+                android:valueTo="0"
+                android:valueType="floatType" />
+        </aapt:attr>
+    </target>
+</animated-vector>
